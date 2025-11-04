@@ -9,7 +9,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f2f5;
+            background: linear-gradient(to right, #e2e2e2, #f0f2f5);
             margin: 0;
             padding: 20px;
             display: flex;
@@ -31,11 +31,12 @@
             height: 100px;
             border-radius: 50%;
             object-fit: cover;
-            margin-bottom: 20px;
-            border: 3px solid rgb(0, 0, 0);
+            margin-bottom: 15px;
+            border: 4px solid #0c2d52;
         }
         h1 {
             font-size: 2em;
+            color:#0c2d52;
             margin: 10px 0 5px;
         }
         h2 {
@@ -45,10 +46,11 @@
             color: #333;
         }
         .short-bio {
-            background-color: black;
+            background-color: #0c2d52;
             color: white;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 5px;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 10px;
         }
         .tech-list {
             list-style-type: none;
@@ -65,8 +67,9 @@
             transition: background-color 0.3s, transform 0.2s;
         }
         .tech-list li:hover {
-            background-color: #e9e9e9;
+            background-color: #e6f2ff;
             transform: translateY(-2px);
+            border-color: #0c2d52;
         }
         p {
             color: #555;
@@ -83,17 +86,23 @@
             transition: color 0.3s;
         }
         .social-icons a:hover {
-            color: rgb(80, 80, 243);
+            /* Fallback for browsers that don't support gradient text */
+            color: #dc2743; 
+        }
+        .social-icons a:hover i {
+            background: linear-gradient(45deg, #f09433, #dc2743, #bc1888);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
     </style>
 </head>
 <body>
     <div class="profile-container">
-               <img src="profile-picture.jpg" alt="Profile Picture" class="profile-picture">
+               <img src="image.jpg" alt="Profile Picture" class="profile-picture">
         <h1>Yusuf Khalil</h1>
         <p>Matric: U22ICE1001 | ICE DEPT. </p>
-        <p>Welcome to my personal profile page. <br>  <i> Here, you can find a little bit about me.</i></p>
-        <h2>Short Bio</h2>
+                <h2>Short Bio</h2>
         <p class="short-bio">I'm a creative problem solver with a passion for building innovative solutions. I enjoy exploring new technologies and collaborating with others to achieve common goals.</p>
         <h2>Favorite Technologies</h2>
         <ul class="tech-list">
